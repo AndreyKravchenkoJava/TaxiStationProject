@@ -9,6 +9,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
+@RequestMapping("/api/cars")
 public class CarController {
 
     @Autowired
@@ -34,4 +35,10 @@ public class CarController {
         carService.deleteCarById(caId);
         return "Deleted Successfully";
     }
+
+    @GetMapping("/cars/price")
+    public int priceAllPark() {
+        return carService.priceAllPark();
+    }
+
 }

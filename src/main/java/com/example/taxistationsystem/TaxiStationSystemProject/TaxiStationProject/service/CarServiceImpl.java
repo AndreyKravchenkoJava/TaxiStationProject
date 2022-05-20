@@ -5,9 +5,7 @@ import com.example.taxistationsystem.TaxiStationSystemProject.TaxiStationProject
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.Locale;
-import java.util.Objects;
+import java.util.*;
 
 @Service
 public class CarServiceImpl implements CarService {
@@ -59,5 +57,16 @@ public class CarServiceImpl implements CarService {
     @Override
     public void deleteCarById(Long carId) {
         carRepository.deleteById(carId);
+    }
+
+    @Override
+    public int priceAllPark() {
+        int price = 0;
+
+        for (Car car : fetchCarList()) {
+            price += car.getPrice();
+        }
+
+        return price;
     }
 }

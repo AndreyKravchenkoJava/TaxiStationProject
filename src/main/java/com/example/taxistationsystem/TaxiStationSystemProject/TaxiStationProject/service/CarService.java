@@ -13,4 +13,7 @@ public interface CarService {
     Car updateCar(Car car, Long carId);
 
     void deleteCarById(Long carId);
+
+    int priceAllPark();
+
 }
