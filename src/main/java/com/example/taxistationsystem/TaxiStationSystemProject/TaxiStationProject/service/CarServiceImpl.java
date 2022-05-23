@@ -61,12 +61,6 @@ public class CarServiceImpl implements CarService {
 
     @Override
     public int priceAllPark() {
-        int price = 0;
-
-        for (Car car : fetchCarList()) {
-            price += car.getPrice();
-        }
-
-        return price;
+       return carRepository.sumAllPark();
     }
 }

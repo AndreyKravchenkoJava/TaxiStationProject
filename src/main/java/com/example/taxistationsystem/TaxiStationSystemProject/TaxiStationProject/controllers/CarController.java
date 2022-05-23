@@ -40,5 +40,4 @@ public class CarController {
     public int priceAllPark() {
         return carService.priceAllPark();
     }
-
 }

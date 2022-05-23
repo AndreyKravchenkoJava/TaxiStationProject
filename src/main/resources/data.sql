@@ -6,3 +6,5 @@ VALUES ('Reno', 'Logan', 10000, 7, 220, 4),
     ('Toyota', 'Prius', 20000, 5, 260, 4);
 
 
+
+
